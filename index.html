@@ -53,6 +53,7 @@
 
         input[type="text"],
         input[type="email"],
+        input[type="tel"],
         select,
         textarea {
             width: 100%;
@@ -88,7 +89,8 @@
 <div class="container">
     <h2>Bitte füllen Sie das Formular aus</h2>
 
-    <form action="/" method="POST">
+    <!-- Formular mit Formspree-Endpunkt -->
+    <form action="https://formspree.io/f/xyzkgowa" method="POST">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required placeholder="Geben Sie Ihren Namen ein">
@@ -97,6 +99,11 @@
         <div class="form-group">
             <label for="email">E-Mail:</label>
             <input type="email" id="email" name="email" required placeholder="Geben Sie Ihre E-Mail ein">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Geben Sie Ihre Telefonnummer ein">
         </div>
 
         <div class="form-group">
