@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Fina - Kontaktformular</title>
     <style>
+        /* Allgemeine Layout-Einstellungen */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             color: #333;
             margin: 0;
             padding: 0;
-            background-image: url('https://pro-fina.de/wp-content/uploads/2021/03/Logo.png');
-            background-size: cover;
-            background-position: center;
         }
+
         header {
-            background-color: rgba(0, 111, 81, 0.8);
+            background-color: #006F51;
             color: white;
             padding: 20px;
             text-align: center;
         }
-        header img {
-            height: 50px;
-            margin-right: 20px;
-            vertical-align: middle;
-        }
+
         h1 {
             font-size: 28px;
-            font-weight: 600;
             margin: 0;
         }
+
         .container {
             width: 80%;
             margin: 50px auto;
@@ -39,25 +35,33 @@
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             text-align: center;
             font-size: 24px;
             margin-bottom: 20px;
         }
+
         .form-group {
             margin-bottom: 15px;
         }
+
         label {
             font-weight: bold;
             display: block;
         }
-        input[type="text"], input[type="email"], select, textarea {
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
             width: 100%;
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         .form-group button {
             width: 100%;
             padding: 12px;
@@ -68,44 +72,33 @@
             cursor: pointer;
             font-size: 18px;
         }
+
         .form-group button:hover {
             background-color: #45a049;
         }
-        footer {
-            background-color: #006F51;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .footer-link {
-            color: #28a745;
-            text-decoration: none;
-        }
-        .footer-link:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
+
 <body>
+
 <header>
-    <img src="https://pro-fina.de/wp-content/uploads/2021/03/Logo.png" alt="Pro Fina Logo">
     <h1>Kontaktformular für Anfragen</h1>
 </header>
+
 <div class="container">
     <h2>Bitte füllen Sie das Formular aus</h2>
-    <!-- Formular mit Formspree-Integration -->
-    <form action="https://formspree.io/f/your_form_id" method="POST">
+
+    <form action="/" method="POST">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required placeholder="Geben Sie Ihren Namen ein">
         </div>
+
         <div class="form-group">
             <label for="email">E-Mail:</label>
             <input type="email" id="email" name="email" required placeholder="Geben Sie Ihre E-Mail ein">
         </div>
+
         <div class="form-group">
             <label for="category">Wofür benötigen Sie Unterstützung?</label>
             <select id="category" name="category" required>
@@ -117,17 +110,17 @@
                 <option value="Versicherungen">Versicherungen</option>
             </select>
         </div>
+
         <div class="form-group">
-            <label for="message">Nachricht</label>
+            <label for="message">Nachricht:</label>
             <textarea id="message" name="message" rows="5" required placeholder="Ihre Nachricht hier"></textarea>
         </div>
+
         <div class="form-group">
             <button type="submit">Anfrage absenden</button>
         </div>
     </form>
 </div>
-<footer>
-    <p>&copy; 2025 Pro Fina | <a href="https://pro-fina.de/" class="footer-link" target="_blank">Zur Website</a></p>
-</footer>
+
 </body>
 </html>
